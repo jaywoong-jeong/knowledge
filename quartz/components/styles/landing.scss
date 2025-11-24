@@ -80,10 +80,9 @@
   gap: 1rem;
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem; /* 0.875rem -> 1rem 로 확대 */
-  border-bottom: 1px solid var(--text-black);
-  padding-bottom: 0.2rem;
-  margin: 0 auto 1rem;
-  max-width: 320px;
+  border-bottom: 2px solid var(--text-black);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1.25rem;
   
   a {
     color: var(--text-black);
