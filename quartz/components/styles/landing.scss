@@ -60,14 +60,15 @@
   &:hover .landing__logo-icon {
     transform: rotate(12deg); /* 틸트 애니메이션 유지 */
   }
+}
 
-  h1 {
-    font-family: "Playfair Display", serif; /* 이탤릭 제거 */
-    font-size: 2.25rem; /* 2rem -> 2.25rem 조금 키움 */
-    font-weight: 700; 
-    margin: 0;
-    padding-bottom: 6px; /* 위로 살짝 올리기 */
-  }
+.landing__logo h1 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  font-size: 2.25rem;
+  margin: 0;
+  padding-bottom: 6px;
 }
 
 .landing__nav {
@@ -171,7 +172,7 @@
 .updates-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem 0 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -357,3 +358,5 @@
   background-color: #22c55e;
   border-radius: 50%;
 }
+
+

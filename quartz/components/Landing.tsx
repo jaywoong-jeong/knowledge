@@ -1,7 +1,5 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import landingStyle from "./styles/landing.scss"
-import { QuartzPluginData } from "../plugins/vfile"
-import { i18n } from "../i18n"
 
 interface LandingCard {
   tag: string
@@ -27,6 +25,12 @@ const Icons = {
     </svg>
   ),
 }
+
+const navLinks = [
+  { href: "https://jaywoong.me", label: "About" },
+  { href: "/index.xml", label: "RSS" },
+  { href: "https://github.com/jaywoong-jeong", label: "Github" },
+]
 
 const cards: LandingCard[] = [
   {
@@ -63,7 +67,7 @@ const cards: LandingCard[] = [
 
 export default (() => {
   const Landing = (props: QuartzComponentProps) => {
-    const { allFiles, cfg } = props
+    const { allFiles } = props
     const currentYear = new Date().getFullYear()
 
     // Get latest updates
@@ -92,9 +96,11 @@ export default (() => {
                 </div>
                 
                 <div class="landing__nav">
-                    <a href="https://jaywoong.me" class="hover:underline">About</a>
-                    <a href="/index.xml" class="hover:underline">RSS</a>
-                    <a href="https://github.com/jaywoong-jeong" class="hover:underline">Github</a>
+                    {navLinks.map((link) => (
+                        <a href={link.href} class="hover:underline" key={link.label}>
+                            {link.label}
+                        </a>
+                    ))}
                 </div>
             </header>
 
