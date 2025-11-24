@@ -70,7 +70,7 @@
   font-family: "Playfair Display", serif;
   letter-spacing: -0.025em;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.85rem;
   margin: 0;
   padding-bottom: 6px;
 }
@@ -124,7 +124,7 @@
 
   p {
     font-family: "Noto Serif KR", serif;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 2.1;
     color: var(--text-black);
     margin: 0;
@@ -133,7 +133,7 @@
   @media (min-width: 768px) {
     text-align: left;
     p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
     }
   }
 }
