@@ -11,6 +11,12 @@ tags:
 
 2024년 11월 24일부터 공부를 시작했습니다.
 
+## Lecture Notes
+
+- [[lecture-01|Lecture 1]]
+- [[lecture-02|Lecture 2]]
+- [[lecture-03|Lecture 3]]
+
 ## Resources
 
 - [Course Website](https://sites.google.com/view/cjin/teaching/ece524)
