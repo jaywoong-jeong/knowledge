@@ -95,13 +95,6 @@ export default (() => {
                     <h1>Jaywoong Jeong</h1>
                 </div>
                 
-                <div class="landing__nav">
-                    {navLinks.map((link) => (
-                        <a href={link.href} class="hover:underline" key={link.label}>
-                            {link.label}
-                        </a>
-                    ))}
-                </div>
             </header>
 
             {/* Intro + Latest Updates */}
@@ -146,16 +139,28 @@ export default (() => {
             </section>
 
             <footer class="landing__footer">
-                <p>
-                  © {currentYear} Jaywoong Jeong. Built with{" "}
-                  <a href="https://github.com/jackyzha0/quartz" target="_blank" rel="noreferrer">
-                    Quartz
-                  </a>
-                  .
-                </p>
-                <div class="system-status">
-                    <span class="status-dot"></span>
-                    System Operational
+                <nav class="footer-nav">
+                  {navLinks.map((link) => (
+                    <a href={link.href} key={link.label}>
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
+                <div class="footer-left">
+                  <p class="footer-credit">
+                    <span>© {currentYear} Jaywoong Jeong</span>
+                    <span>
+                      Built with{" "}
+                      <a href="https://github.com/jackyzha0/quartz" target="_blank" rel="noreferrer">
+                        Quartz
+                      </a>
+                      .
+                    </span>
+                  </p>
+                  <div class="system-status">
+                      <span class="status-dot"></span>
+                      System Operational
+                  </div>
                 </div>
             </footer>
         </div>
