@@ -27,6 +27,12 @@ const cards: LandingCard[] = [
     description: "읽고 보고 느낀 것을 차분하게 해부한 기록",
     href: "/critique",
   },
+  {
+    title: "Papers",
+    subtitle: "논문과 연구",
+    description: "읽고 정리한 논문과 연구 노트",
+    href: "/papers",
+  },
 ]
 
 export default (() => {
@@ -45,8 +51,12 @@ export default (() => {
           {cards.map((card) => (
             <a key={card.title} href={card.href} class="landing-card">
               <p class="landing-card__subtitle">{card.subtitle}</p>
-              <h2>{card.title}</h2>
+              <h2 class="landing-card__title">
+                {card.title}
+                <span class="title-underline"></span>
+              </h2>
               <p class="landing-card__description">{card.description}</p>
+              <span class="landing-card__arrow">→</span>
             </a>
           ))}
         </section>

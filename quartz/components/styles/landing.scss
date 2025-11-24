@@ -1,5 +1,23 @@
 :root {
     --landing-bg: #ffffff;
+    
+    /* Card Colors - Light Mode */
+    --card-bg: #ffffff;
+    --card-border: rgba(228, 228, 231, 0.6);
+    --card-border-hover: rgba(212, 212, 216, 0.8);
+    --card-text-primary: #18181b;
+    --card-text-secondary: #52525b;
+  }
+  
+  [saved-theme="dark"] {
+    --landing-bg: #09090b;
+    
+    /* Card Colors - Dark Mode */
+    --card-bg: #09090b;
+    --card-border: rgba(39, 39, 42, 0.6);
+    --card-border-hover: rgba(63, 63, 70, 0.8);
+    --card-text-primary: #f4f4f5;
+    --card-text-secondary: #a1a1aa;
   }
   
   .landing {
@@ -86,53 +104,102 @@
     color: var(--secondary);
   }
   
+  /* ===== Entry Animation ===== */
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
   .landing__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    animation: slideUpFade 0.3s ease-out forwards;
+  }
+
+  @media (min-width: 1024px) {
+    .landing__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
   
   .landing-card {
     position: relative;
     padding: 1.75rem;
-    border-radius: 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(28, 28, 28, 0.05);
-    box-shadow: 0 15px 35px rgba(34, 48, 73, 0.12);
+    border-radius: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    transition: transform 250ms ease, box-shadow 250ms ease;
+    transition: all 0.2s ease, transform 250ms ease, box-shadow 250ms ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    min-width: 0;
   }
   
+  /* Hover Effect - Border Color Change + Float Up */
   .landing-card:hover {
+    border-color: var(--card-border-hover);
     transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(34, 48, 73, 0.18);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   }
   
   .landing-card__subtitle {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--primary);
-  }
-  
-  .landing-card h2 {
+    color: var(--card-text-secondary);
     margin: 0;
-    font-size: 1.5rem;
+  }
+
+  .landing-card__title {
+    margin: 0;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--card-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Title Underline Effect */
+  .title-underline {
+    display: block;
+    height: 1px;
+    background-color: var(--card-text-primary);
+    max-width: 0;
+    transition: max-width 0.2s ease;
+    margin-top: 0.25rem;
+  }
+
+  .landing-card:hover .title-underline {
+    max-width: 100%;
   }
   
   .landing-card__description {
     flex: 1;
-    color: var(--tertiary);
+    color: var(--card-text-secondary);
     line-height: 1.5;
+    font-size: 0.75rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
-  
-  .landing-card__link {
+
+  .landing-card__arrow {
+    font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--card-text-primary);
+    align-self: flex-start;
   }
   
   .landing__footer {
