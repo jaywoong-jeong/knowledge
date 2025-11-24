@@ -94,7 +94,13 @@ export default (() => {
                     <img src="/static/icon.svg" alt="Logo" class="landing__logo-icon" />
                     <h1>Jaywoong Jeong</h1>
                 </div>
-                
+                <nav class="landing__nav">
+                    {navLinks.map((link) => (
+                      <a href={link.href} class="hover:underline" key={link.label}>
+                        {link.label}
+                      </a>
+                    ))}
+                </nav>
             </header>
 
             {/* Intro + Latest Updates */}
