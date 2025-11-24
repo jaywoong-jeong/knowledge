@@ -81,7 +81,7 @@ const config: QuartzConfig = {
       Plugin.ContentPage(),
       Plugin.FolderPage({
         pageBody: Component.FolderContent({
-          showFolderCount: false,
+          showFolderCount: true,
         }),
       }),
       Plugin.TagPage(),
