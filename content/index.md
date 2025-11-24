@@ -1,5 +1,5 @@
 ---
-title: Welcome to My Quartz
+title: Jaywoong Jeong
 ---
 
 안녕하세요! 이곳은 저의 디지털 가든입니다.
