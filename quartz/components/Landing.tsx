@@ -36,7 +36,10 @@ export default (() => {
     return (
       <main class="landing">
         <section class="landing__hero">
-          <h1>Jaywoong Jeong</h1>
+          <div class="landing__title-wrapper">
+            <img src="/static/icon.svg" alt="Icon" class="landing__icon" />
+            <h1>Jaywoong Jeong</h1>
+          </div>
         </section>
         <section class="landing__grid">
           {cards.map((card) => (
@@ -44,7 +47,6 @@ export default (() => {
               <p class="landing-card__subtitle">{card.subtitle}</p>
               <h2>{card.title}</h2>
               <p class="landing-card__description">{card.description}</p>
-              <span class="landing-card__link">살펴보기 →</span>
             </a>
           ))}
         </section>

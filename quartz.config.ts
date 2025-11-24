@@ -9,7 +9,7 @@ import * as Component from "./quartz/components"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Jaywoong Jeong",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
