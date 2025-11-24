@@ -13,13 +13,17 @@
 .landing {
   min-height: 100vh;
   padding: 0 1.5rem; /* 상하 0, 좌우 1.5rem */
-  background: var(--landing-bg);
+  background: linear-gradient(140deg, #ffffff 0%, #f3f3f3 45%, #e8e8e8 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* center -> flex-start */
   font-family: "Inter", sans-serif;
   color: var(--text-black);
+}
+
+[saved-theme="dark"] .landing {
+  background: linear-gradient(140deg, #080808 0%, #141414 45%, #1f1f1f 100%);
 }
 
 .landing__container {
@@ -66,7 +70,7 @@
   font-family: "Playfair Display", serif;
   letter-spacing: -0.025em;
   font-weight: 700;
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin: 0;
   padding-bottom: 6px;
 }
@@ -120,8 +124,8 @@
 
   p {
     font-family: "Noto Serif KR", serif;
-    font-size: 1rem; /* lg -> xl base */
-    line-height: 2.1; /* 1.625 -> 1.8 */
+    font-size: 0.95rem;
+    line-height: 2.1;
     color: var(--text-black);
     margin: 0;
   }
@@ -129,7 +133,7 @@
   @media (min-width: 768px) {
     text-align: left;
     p {
-      font-size: 1.25rem; /* xl -> 2xl (1.5rem -> 1.25rem) */
+      font-size: 1.2rem;
     }
   }
 }
