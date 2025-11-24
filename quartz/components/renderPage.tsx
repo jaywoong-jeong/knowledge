@@ -262,12 +262,6 @@ export function renderPage(
   const lang = componentData.fileData.frontmatter?.lang ?? cfg.locale?.split("-")[0] ?? "en"
   const direction = i18n(cfg.locale).direction ?? "ltr"
   const isLandingPage = slug === "index"
-  
-  // Add Landing component CSS to resources if it's the landing page
-  if (isLandingPage && Landing.css) {
-    pageResources.css.push(Landing.css)
-  }
-  
   const landingContent = <Landing {...componentData} />
   const standardContent = (
     <div id="quartz-root" class="page">
