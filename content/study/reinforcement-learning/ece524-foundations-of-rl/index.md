@@ -1,5 +1,6 @@
 ---
 title: ECE524 Foundations of Reinforcement Learning
+hideFolderListing: true
 tags:
   - course
 ---
